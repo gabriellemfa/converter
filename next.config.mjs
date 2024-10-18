@@ -5,7 +5,7 @@ const nextConfig = {
     unoptimized: true, // Disable default image optimization
   },
   assetPrefix: isProd ? '/converter/' : '',
-  basePath: isProd ? '/converter' : '',
+  basePath: process.env.NODE_ENV === 'production' ? '/converter' : '',
   output: 'export'
 };
 
